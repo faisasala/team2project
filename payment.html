@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #000;
+            width: 100%;
+            padding: 1rem 1.5rem;
+        }
+
+        .navbar-brand img {
+            height: 60px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 1.25rem;
+            transition: color 0.3s;
+        }
+
+        .btn-subscribe {
+            background-color: #443c0d;
+            color: #000;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #aaa;
+        }
+
+        .navbar-nav {
+            margin-left: 0;
+        }
+
+        .navbar-right {
+            margin-left: auto;
+        }
+
+        .container {
+            background-color: #fff;
+            color: #212121;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 700px;
+            margin-top: 20px;
+            flex-grow: 1;
+        }
+
+        h1,
+        h2 {
+            color: #007BFF;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            font-size: 1.1em;
+        }
+
+        .radio-group input {
+            margin-right: 10px;
+        }
+
+        .order-summary {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #000;
+            padding: 1rem 0;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            transition: color 0.3s;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Home.html">
+                <img src="https://australianmotorclub.com.au/wp-content/uploads/2022/08/Black-Background-Logo-MY-LYFESTYLE.jpg"
+                    alt="Lifestyle Rewards" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="help.html">F&Q</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reward.html">Rewards</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-subscribe" href="subscribe.html">Subscribe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Payment Page</h1>
+
+        <!-- Payment Methods -->
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="paymentMethod" value="creditCard" checked> Credit/Debit Card
+            </label>
+            <label>
+                <input type="radio" name="paymentMethod" value="paypal"> Paypal
+            </label>
+        </div>
+
+        <form id="paymentForm" action="/process-payment" method="POST">
+            <h2>Payment Information</h2>
+
+            <!-- Credit Card Details -->
+            <div class="form-group">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+                <div class="error" id="cardNumberError"></div>
+            </div>
+            <div class="form-group">
+                <label for="cardName">Cardholder Name:</label>
+                <input type="text" id="cardName" name="cardName" required>
+                <div class="error" id="cardNameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                <div class="error" id="expiryDateError"></div>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+                <div class="error" id="cvvError"></div>
+            </div>
+
+            <!-- Billing Address -->
+            <h2>Billing Address</h2>
+            <div class="form-group">
+                <label for="billingAddress">Address:</label>
+                <input type="text" id="billingAddress" name="billingAddress" required>
+                <div class="error" id="billingAddressError"></div>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                <div class="error" id="cityError"></div>
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+                <div class="error" id="stateError"></div>
+            </div>
+            <div class="form-group">
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip" name="zip" required>
+                <div class="error" id="zipError"></div>
+            </div>
+
+            <!-- Order Summary -->
+            <h2>Order Summary</h2>
+            <div class="order-summary">
+                <div class="form-group">
+                    <label for="Email">Email Address:</label>
+                    <input type="text" id="zip" name="zip" required>
+                    <div class="error" id="zipError"></div>
+                
+                    <p style="margin-top: 40px; margin-bottom: 10px;">Order ID: 123456</p>
+                <p>Total Amount: $9</p>
+            </div>
+
+            
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let isValid = true;
+
+            const cardNumber = document.getElementById('cardNumber');
+            const cardName = document.getElementById('cardName');
+            const expiryDate = document.getElementById('expiryDate');
+            const cvv = document.getElementById('cvv');
+            const billingAddress = document.getElementById('billingAddress');
+            const city = document.getElementById('city');
+            const state = document.getElementById('state');
+            const zip = document.getElementById('zip');
+
+            const fields = [
+                {
+                    element: cardNumber,
+                    errorElement: document.getElementById('cardNumberError')
+                },
+                {
+                    element: cardName,
+                    errorElement: document.getElementById('cardNameError')
+                },
+                {
+                    element: expiryDate,
+                    errorElement: document.getElementById('expiryDateError')
+                },
+                {
+                    element: cvv,
+                    errorElement: document.getElementById('cvvError')
+                },
+                {
+                    element: billingAddress,
+                    errorElement: document.getElementById('billingAddressError')
+                },
+                {
+                    element: city,
+                    errorElement: document.getElementById('cityError')
+                },
+                {
+                    element: state,
+                    errorElement: document.getElementById('stateError')
+                },
+                {
+                    element: zip,
+                    errorElement: document.getElementById('zipError')
+                },
+            ];
+
+            fields.forEach(field => {
+                if (field.element.value.trim() === '') {
+                    field.errorElement.textContent = 'This field is required';
+                    isValid = false;
+                } else {
+                    field.errorElement.textContent = '';
+                }
+            });
+
+            if (isValid) {
+                window.location.href = 'paymentconfirmation.html';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

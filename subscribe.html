@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Page</title>
+  <!-- Bootstrap CSS for responsive design and pre-styled components -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* General body styling */
+    body {
+      background-color: #343a40;
+      color: white;
+    }
+
+    /* Gradient background for primary sections */
+    .bg-gradient-primary {
+      background: linear-gradient(to right, #282828, #250952);
+    }
+
+    /* Text colors */
+    .text-primary-foreground {
+      color: white;
+    }
+
+    .text-muted-foreground {
+      color: #6c757d;
+    }
+
+    /* Background colors */
+    .bg-muted {
+      background-color: #495057;
+    }
+
+    .bg-background {
+      background-color: #343a40;
+    }
+
+    /* Card styling */
+    .card {
+      padding: 20px;
+      background-color: #000000;
+      color: white;
+      border: none;
+    }
+
+    /* Button styling */
+    .btn-secondary {
+      background-color: #6c757d;
+      color: white;
+    }
+
+    .btn-light {
+      background-color: #f8f9fa;
+      color: #343a40;
+    }
+
+    .btn-subscribe {
+      background-color: #443c0d;
+      color: #000;
+    }
+
+    .btn-subscribe:hover {
+      background-color: #5b626a;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #000;
+      padding: 1rem 1.5rem;
+    }
+
+    .navbar-brand img {
+      height: 60px;
+    }
+
+    .navbar .navbar-brand,
+    .navbar .navbar-nav .nav-link,
+    .navbar .navbar-nav .nav-link.btn-subscribe {
+      color: #fff;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 1.25rem;
+      transition: color 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #aaa;
+    }
+
+    .navbar-nav {
+      margin-left: 0;
+    }
+
+    .navbar-right {
+      margin-left: auto;
+    }
+
+    /* Min height for sections */
+    .min-h-dvh {
+      min-height: 100vh;
+    }
+
+    .subscription-card {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #000;
+      padding: 1rem 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #aaa;
+    }
+
+    /* Animation styles */
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .pop-out {
+      animation: popOut 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes popOut {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Hover effect for the Basic subscription card */
+    .card-hover-effect {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card-hover-effect:hover {
+      transform: translateY(-10px) scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Home.html">
+        <img src="https://australianmotorclub.com.au/wp-content/uploads/2022/08/Black-Background-Logo-MY-LYFESTYLE.jpg"
+          alt="Lifestyle Rewards" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="help.html">F&Q</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reward.html">Rewards</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link btn btn-subscribe" href="subscribe.html">Subscribe</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div class="container-fluid d-flex flex-column min-h-dvh">
+    <!-- Hero section with animation -->
+    <section class="w-100 py-5 bg-gradient-primary text-primary-foreground text-center fade-in">
+      <div class="container">
+        <div class="mx-auto" style="max-width: 600px;">
+          <h1 class="display-4 font-weight-bold">Subscribe to our lifestyle brand</h1>
+          <p class="lead">Get exclusive access to our latest products, content, and community.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscription Tiers section -->
+    <section class="w-100 py-5">
+      <div class="container">
+        <div class="mx-auto text-center subscription-card">
+          <h2 class="font-weight-bold">Subscription Tiers</h2>
+          <p class="text-muted-foreground">Choose the plan that best fits your needs.</p>
+          <div class="card text-left pop-out card-hover-effect">
+            <div>
+              <h3 class="h4 font-weight-bold">Basic</h3>
+              <p class="h2 font-weight-bold">$9/mo</p>
+            </div>
+            <ul class="list-unstyled text-muted-foreground">
+              <li><i class="fas fa-check mr-2"></i> Access to our product catalog</li>
+              <li><i class="fas fa-check mr-2"></i> Weekly lifestyle tips</li>
+              <li><i class="fas fa-check mr-2"></i> Member-only discounts</li>
+            </ul>
+            <a href="payment.html" class="btn btn-secondary">Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials section -->
+    <section class="w-100 py-5 bg-muted">
+      <div class="container">
+        <div class="mx-auto text-center" style="max-width: 800px;">
+          <h2 class="font-weight-bold">What Our Customers Say</h2>
+          <p class="text-muted-foreground">Hear from our satisfied subscribers.</p>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card bg-background text-left pop-out">
+                <blockquote class="blockquote">
+                  <p class="mb-0">"The products are amazing and the community is so supportive. I'm so glad I
+                    subscribed!"</p>
+                </blockquote>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-background text-left pop-out">
+                <blockquote class="blockquote">
+                  <p class="mb-0">"The exclusive content and early access to new products make this subscription
+                    worth every penny."</p>
+                </blockquote>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-background text-left pop-out">
+                <blockquote class="blockquote">
+                  <p class="mb-0">"I've been a subscriber for years and the value just keeps getting better. Highly
+                    recommend!"</p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Lifestyle Rewards. All Rights Reserved.</p>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+  </footer>
+
+  <!-- Font Awesome Icons for icons used in the subscription card -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- jQuery for Bootstrap functionality -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <!-- Popper.js for Bootstrap functionality -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <!-- Bootstrap JS for responsive design and interactive components -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

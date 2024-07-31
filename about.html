@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifestyle Brand</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #212121;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #000;
+      padding: 1rem 1.5rem;
+    }
+
+    .navbar .navbar-brand,
+    .navbar .navbar-nav .nav-link,
+    .navbar .navbar-nav .nav-link.btn-subscribe {
+      color: #fff;
+    }
+
+    .navbar-brand img {
+      height: 60px;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 1.25rem;
+      transition: color 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #aaa;
+    }
+
+    .navbar-nav {
+      margin-left: 0;
+    }
+
+    .navbar-right {
+      margin-left: auto;
+    }
+
+    .hero-section {
+      height: 50vh;
+      position: relative;
+      background: url('/placeholder.svg') no-repeat center center/cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    .team-member img {
+      border-radius: 50%;
+    }
+
+    .btn-primary {
+      background-color: #fff;
+      color: #000;
+      border: #443c0d;
+      padding: 10px 20px;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #515151;
+    }
+
+    .btn-subscribe {
+      background-color: #443c0d;
+      color: #000;
+    }
+
+    .btn-subscribe:hover {
+      background-color: #5b626a;
+    }
+
+    .hero-title {
+      font-weight: bold;
+      color: #ffffff; /* Bright yellow for better visibility */
+    }
+
+    .hero-subtitle {
+      font-weight: bold;
+      color: #fbf9f6; /* Orange color for better visibility */
+    }
+    footer {
+            background-color: #000;
+            padding: 1rem 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #aaa;
+        }
+  </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Home.html">
+                <img src="https://australianmotorclub.com.au/wp-content/uploads/2022/08/Black-Background-Logo-MY-LYFESTYLE.jpg"
+                    alt="Lifestyle Rewards" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="help.html">F&Q</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reward.html">Rewards</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-subscribe" href="subscribe.html">Subscribe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <div class="container-fluid">
+    <section class="hero-section">
+      <div class="hero-overlay">
+        <h1 class="display-4 font-weight-bold">Elevate Your Lifestyle</h1>
+        <p class="lead">Discover the perfect balance of style, comfort, and sustainability with our curated collection.</p>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="display-4 font-weight-bold">Our Mission</h2>
+            <p class="text-muted">
+              At Lifestyle Brand, our mission is to inspire and empower individuals to live their best lives. We believe that true fulfillment comes from embracing a balanced and mindful approach to living. Through our carefully curated products and community initiatives, we strive to help our customers cultivate a lifestyle that nourishes their mind, body, and spirit.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="display-4 font-weight-bold">Our History</h2>
+            <p class="text-muted">
+              Lifestyle Brand was founded in 2015 by a passionate team of individuals who shared a vision for a more conscious and sustainable future. Starting as a small online boutique, we have grown to become a trusted destination for those seeking to elevate their everyday lives. Our commitment to quality, innovation, and community involvement has been the driving force behind our success.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-4 team-member">
+            <p class="text-muted">Co-Founder & CEO</p>
+            <p class="text-muted">
+              Jane is a visionary leader with a passion for sustainable living. She has over a decade of experience in the lifestyle industry and is committed to building a community that empowers individuals to live their best lives.
+            </p>
+          </div>
+          <div class="col-lg-4 team-member">
+            <p class="text-muted">Co-Founder & COO</p>
+            <p class="text-muted">
+              John is a seasoned operations expert with a keen eye for detail. He ensures that Lifestyle Brand's supply chain and logistics run seamlessly, allowing the team to focus on delivering exceptional customer experiences.
+            </p>
+          </div>
+          <div class="col-lg-4 team-member">
+            <p class="text-muted">Creative Director</p>
+            <p class="text-muted">
+              Sarah is the creative visionary behind Lifestyle Brand's aesthetic. With a keen eye for design and a deep understanding of the brand's ethos, she ensures that every product and marketing campaign reflects the company's
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="display-4 font-weight-bold">Our Core Values</h2>
+            <ul class="list-unstyled mt-4 text-muted">
+              <li class="d-flex align-items-start mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M20 6 9 17l-5-5"></path></svg>
+                <div>
+                  <h5 class="font-weight-bold">Sustainability</h5>
+                  <p>We are committed to reducing our environmental impact and promoting sustainable practices throughout our business.</p>
+                </div>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M20 6 9 17l-5-5"></path></svg>
+                <div>
+                  <h5 class="font-weight-bold">Mindfulness</h5>
+                  <p>We believe in the power of mindfulness and self-care, and we strive to inspire our customers to live more intentional lives.</p>
+                </div>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M20 6 9 17l-5-5"></path></svg>
+                <div>
+                  <h5 class="font-weight-bold">Community</h5>
+                  <p>We are dedicated to building a supportive community of like-minded individuals who share our passion for living well.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="display-4 font-weight-bold">Our Products</h2>
+            <p class="text-muted">
+              At Lifestyle Brand, we curate a carefully selected collection of products that embody our commitment to quality, sustainability, and mindful living. From eco-friendly apparel and home goods to wellness accessories and lifestyle tools, our products are designed to help our customers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2024 Lifestyle Rewards. All Rights Reserved.</p>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
